@@ -3,7 +3,7 @@ function ItunesService(){
     this.getMusicByArtist = function(artist) {
 
       //allows requests to localhost: 8080 otherwise blocked by itunes
-      var url = 'https://itunes.apple.com/search?term=' + artist;
+      var url = 'https://itunes.apple.com/search?term=' + artist + '&media=music';
       
       //changes the button to loading while songs load
       $('#get-music-button').text('LOADING....');
