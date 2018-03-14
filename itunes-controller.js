@@ -30,14 +30,14 @@ function ItunesController(){
       // </div>
       // `
       template += `
-      <div class="card bg-light mb-3" style="width: 21em;">
+      <div class="card bg-light mb-3 float-left" style="width: 350px; height: 300px">
       <div class="card-body">
         <div>
           <img src="${song.albumArt}" alt="album artwork" width="75px">
         </div>
         <h5 class="card-title">${song.title}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Artist: ${song.artist}</h6>
-        <p></p>Album: ${song.collection}  Album Price: $${song.price}</p>
+        <p style="padding-top: 3px;">Album: ${song.collection}  Album Price: $${song.price}</p>
         <audio controls preload="auto" style="display: block;">
           <source src="${song.preview}">
         </audio>
