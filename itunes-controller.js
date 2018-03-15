@@ -25,7 +25,7 @@ function ItunesController(){
         </div>
         <h5 class="card-title">${song.title}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Artist: ${song.artist}</h6>
-        <p style="padding-top: 3px;">Album: ${song.collection}  Album Price: $${song.price}</p>
+        <p>Album: ${song.collection}  Album Price: $${song.price}</p>
         <audio controls preload="auto" class="player">
           <source src="${song.preview}">
         </audio>

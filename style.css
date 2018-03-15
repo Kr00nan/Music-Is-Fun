@@ -2,6 +2,10 @@ body {
     background-color: rgb(127, 119, 175);
 }
 
+p {
+    padding-top: 3px;
+}
+
 img {
     width: 75px;
 }
