@@ -15,7 +15,7 @@ function ItunesController(){
 
     results.forEach(song => {
       if(song.price == undefined) {
-        song.price = " N/A";
+        song.price = " Album Only";
       }
       template += `
       <div class="card bg-light mb-3 float-left">
