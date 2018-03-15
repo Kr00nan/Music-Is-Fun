@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(48, 33, 131);
+}
+
+img {
+    width: 75px;
+}
+
+audio {
+    display: block;
+}
+
+.card .bg-light .mb-3 .float-left {
+    width: 350px; 
+    height: 300px;
+}

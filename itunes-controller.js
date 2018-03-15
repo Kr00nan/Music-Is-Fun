@@ -14,31 +14,19 @@ function ItunesController(){
     var template = "";
 
     results.forEach(song => {
-      // template += `
-      // <div class="row">
-      //   <div class="col">
-      //     <p>${song.title}</p>
-      //     <img src="${song.albumArt}" alt="album artwork">
-      //   </div>
-      //   <div class="col-6">
-      //     Price: $${song.price}<br>
-      //     <audio controls preload="auto">
-      //       <source src="${song.preview}">
-      //     </audio>
-      //   </div>
-      //   <div class="col"></div> 
-      // </div>
-      // `
+      if(song.price == undefined) {
+        song.price = " N/A";
+      }
       template += `
-      <div class="card bg-light mb-3 float-left" style="width: 350px; height: 300px">
+      <div class="card bg-light mb-3 float-left">
       <div class="card-body">
         <div>
-          <img src="${song.albumArt}" alt="album artwork" width="75px">
+          <img src="${song.albumArt}" alt="album artwork">
         </div>
         <h5 class="card-title">${song.title}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Artist: ${song.artist}</h6>
         <p style="padding-top: 3px;">Album: ${song.collection}  Album Price: $${song.price}</p>
-        <audio controls preload="auto" style="display: block;">
+        <audio controls preload="auto" class="player">
           <source src="${song.preview}">
         </audio>
       </div>
@@ -46,11 +34,18 @@ function ItunesController(){
       `
     });
 
-    elemID.innerHTML = template;
+     elemID.innerHTML = template;
+
+    // var audios = document.getElementsByClassName('player');
+    // for (let i = 0; i < audios.length; i++) {
+    //   const player = audios[i];
+    //   player.addEventListener('click', function() {
+    //     if(player.paused() == true) {
+    //       player.play() == true;
+    //     }
+    //   })
+      
+    // }
+
   }
-
-
-
-
-  
 }
