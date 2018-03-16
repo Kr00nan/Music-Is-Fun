@@ -11,7 +11,7 @@ function ItunesService(){
       //modifies the objects to reduce the excess data
       return $.getJSON(url).then(function(response){
         // debugger 
-        // console.log(response.results[0])
+        console.log(response.results[0])
         var songList = response.results.map(function (song) {
                   return {
                       title: song.trackName,
@@ -19,7 +19,8 @@ function ItunesService(){
                       artist: song.artistName,
                       collection: song.collectionName,
                       price: song.collectionPrice,
-                      preview: song.previewUrl
+                      preview: song.previewUrl,
+                      id: song.trackId
                     };
                 })
         //changes button back to GET MUSIC once songs are loaded
